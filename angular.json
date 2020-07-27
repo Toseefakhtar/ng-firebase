@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-firebase-app"
+    }
+  },
+  "defaultProject": "ng-firebase-app",
+  "cli": {
+    "analytics": false
+  }
 }
