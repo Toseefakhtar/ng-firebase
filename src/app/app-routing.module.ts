@@ -12,7 +12,20 @@ const routes: Routes = [
   },
   {path : 'login' , component: LoginComponent},
   {path : 'home', component: HomeComponent},
-  {path : 'register', component: RegisterComponent}
+  {path : 'register', component: RegisterComponent},
+  {
+    path: 'users',
+    loadChildren: () => import('./components/users/users.module').then(m => m.UsersModule)
+  },
+  {
+    path: 'details/:id',
+    loadChildren: () => import('./components/details/details.module').then(m => m.DetailsModule)
+  },
+  {
+    path: 'posts',
+    loadChildren: () => import('./components/posts/posts.module').then(m => m.PostsModule)
+  }
+
 ];
 
 @NgModule({
